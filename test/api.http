@@ -38,3 +38,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjU1MzM2M
     "description": "Salario Freela",
     "type": "credit"
 }
+
+### Ver Extrato e Saldo
+GET http://localhost:3333/statements/balance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjU1MzM2MTksImV4cCI6MTc2NTYyMDAxOSwic3ViIjoiZjg1NWJiMDQtMzI2OS00NDQ4LWE4MjUtMDFhNTJkNGU0M2FhIn0.mMl2Inkqpf5veVbgWz2GIABzsH3qzVw-lgtVh-h3V7w
