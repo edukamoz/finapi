@@ -1,0 +1,40 @@
+### Criar Usuario
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "Dev Senior",
+    "email": "dev@exemplo.com",
+    "password": "senha_super_secreta"
+}
+
+### Autenticar Usuario (Login)
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "dev@exemplo.com",
+    "password": "senha_super_secreta"
+}
+
+### Criar Saque (Erro esperado: Insufficient funds)
+POST http://localhost:3333/statements/withdraw
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjU1MzM2MTksImV4cCI6MTc2NTYyMDAxOSwic3ViIjoiZjg1NWJiMDQtMzI2OS00NDQ4LWE4MjUtMDFhNTJkNGU0M2FhIn0.mMl2Inkqpf5veVbgWz2GIABzsH3qzVw-lgtVh-h3V7w
+
+{
+    "amount": 100,
+    "description": "Pagamento Aluguel",
+    "type": "debit"
+}
+
+### Criar Deposito
+POST http://localhost:3333/statements/deposit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjU1MzM2MTksImV4cCI6MTc2NTYyMDAxOSwic3ViIjoiZjg1NWJiMDQtMzI2OS00NDQ4LWE4MjUtMDFhNTJkNGU0M2FhIn0.mMl2Inkqpf5veVbgWz2GIABzsH3qzVw-lgtVh-h3V7w
+
+{
+    "amount": 500.50,
+    "description": "Salario Freela",
+    "type": "credit"
+}
